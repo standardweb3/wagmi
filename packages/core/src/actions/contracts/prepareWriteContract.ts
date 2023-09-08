@@ -1,5 +1,5 @@
 import type { Abi, Address, ExtractAbiFunction } from 'abitype'
-import type { PopulatedTransaction } from 'ethers'
+import type { BigNumber, PopulatedTransaction } from 'ethers'
 
 import {
   ConnectorNotFoundError,
@@ -38,6 +38,8 @@ export type PrepareWriteContractConfig<
   >
   /** Custom signer */
   signer?: TSigner | null
+  /** Ether value */
+  value?: BigNumber | null
 }
 
 export type Request = PopulatedTransaction & {
@@ -112,7 +114,11 @@ export async function prepareWriteContract<
       functionName: normalizedFunctionName,
     })
 
-  const params = [...(args ?? []), ...(overrides ? [overrides] : [])]
+  const params = [
+    ...(args ?? []),
+    ...(overrides ? [overrides] : []),
+    { value: config.value },
+  ]
   const unsignedTransaction = (await populateTransactionFn(
     ...params,
   )) as PopulatedTransaction & {
