@@ -1,16 +1,17 @@
 {
-  "name": "wagmi",
-  "description": "React Hooks for Ethereum",
+  "name": "nagmi",
+  "description": "Practical React Hooks for Ethereum",
   "license": "MIT",
-  "version": "0.12.19",
+  "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wagmi-dev/wagmi.git",
+    "url": "https://github.com/standardweb3/nagmi.git",
     "directory": "packages/react"
   },
   "contributors": [
     "awkweb.eth <t@wagmi.sh>",
-    "jxom.eth <j@wagmi.sh>"
+    "jxom.eth <j@wagmi.sh>",
+    "Hyungsuk Kang <hyungsuk@standard.tech>"
   ],
   "homepage": "https://wagmi.sh",
   "ethereum": "wagmi-dev.eth",
