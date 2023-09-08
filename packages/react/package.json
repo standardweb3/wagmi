@@ -13,16 +13,16 @@
     "jxom.eth <j@wagmi.sh>",
     "Hyungsuk Kang <hyungsuk@standard.tech>"
   ],
-  "homepage": "https://wagmi.sh",
-  "ethereum": "wagmi-dev.eth",
+  "homepage": "https://nagmi.sh",
+  "ethereum": "stnd.eth",
   "funding": [
     {
       "type": "gitcoin",
-      "url": "https://wagmi.sh/gitcoin"
+      "url": "https://nagmi.sh/gitcoin"
     },
     {
       "type": "github",
-      "url": "https://github.com/sponsors/wagmi-dev"
+      "url": "https://github.com/sponsors/standardweb3"
     }
   ],
   "type": "module",
@@ -143,5 +143,8 @@
   "scripts": {
     "build": "tsup",
     "dev": "DEV=true tsup"
+  },
+  "publishConfig": {
+    "branch": "0.12.x"
   }
 }
